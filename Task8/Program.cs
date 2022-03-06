@@ -7,8 +7,14 @@ int middle;
 while (B - A != 1)
 {
     middle = (B + A) / 2;
-    if ((middle * middle * middle) > C) B = middle;
-    else A = middle;
+    if ((middle * middle * middle) > C)
+    {
+        B = middle;
+    }
+    else
+    {
+        A = middle;
+    }
 
 }
 Console.WriteLine(A);

@@ -9,6 +9,9 @@ while (A > 0)
         A /= 10;
         count++;
     }
-    else A /= 10;
+    else
+    {
+        A /= 10;
+    }
 }
 Console.WriteLine($"Count of odd: {count}");

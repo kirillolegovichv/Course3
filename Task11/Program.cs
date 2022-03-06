@@ -11,9 +11,18 @@ for (int i = 1; i < N; i++)
     odd = 0;
     while (j > 0)
     {
-        if ((j % 10) % 2 == 0)  even++;
-        else odd++;
+        if ((j % 10) % 2 == 0)
+        {
+            even += i;
+        }
+        else
+        {
+            odd += i;
+        }
         j /= 10;
     }
-    if (even > odd) Console.WriteLine(i);
+    if (even > odd)
+    {
+        Console.WriteLine(i);
+    }
 }
