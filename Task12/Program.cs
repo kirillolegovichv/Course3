@@ -1,16 +1,22 @@
 ﻿Console.Write(" Enter А: ");
-string A = Console.ReadLine();
+int A = Convert.ToInt32(Console.ReadLine());
 Console.Write(" Enter B: ");
-string B = Console.ReadLine();
-string result = "";
+int B = Convert.ToInt32(Console.ReadLine());
+string result = "НЕТ";
 
-for (int i = 0; i < A.Length; i++)
+
+while (A > 0)
 {
-    for (int j = 0; j < B.Length; j++)
+    int tmpForB = B;
+    while (tmpForB > 0)
     {
-        if (A[i] == B[j]) result = " Да ";
+        if (A % 10 == tmpForB % 10)
+        {
+            result = "ДА";
+        }
+        tmpForB /= 10;
     }
+    A /= 10;
 }
 
-if (result == "") Console.WriteLine(" Нет ");
-else Console.WriteLine(result);
+Console.WriteLine(result);
